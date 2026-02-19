@@ -1,0 +1,24 @@
+name: Deploy Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Debut du deploiement
+        run: echo 'Debut du deploiement'
+
+      - name: Afficher le secret
+        env:
+          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+        run: echo "La valeur du token est : $DEPLOY_TOKEN"
+
+      - name: Deploiement termine
+        run: echo 'Deploiement termine par KOMDJAM TCHOUCTIO ABIGAEL'

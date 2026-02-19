@@ -18,7 +18,8 @@ jobs:
       - name: Afficher le secret
         env:
           DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
-        run: echo "La valeur du token est : $DEPLOY_TOKEN"
+        run: |
+          echo "La valeur du token est : $DEPLOY_TOKEN"
 
       - name: Deploiement termine
         run: echo 'Deploiement termine par KOMDJAM TCHOUCTIO ABIGAEL'
